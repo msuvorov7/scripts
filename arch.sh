@@ -29,13 +29,7 @@ echo "\n127.0.1.1 localhost.localdomain archPC" >> /etc/hosts ##
 pacman -S networkmanager
 systemctl enable NetworkManager
 pacman -S pulseaudio pulseaudio-alsa xorg xorg-xinit xorg-server
-passwd
-Maximus10
-Maximus10
 useradd -m -g users -G wheel -s /bin/bash max
-passwd max
-maximus
-maximus
 sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/' /etc/sudoers
 pacman -S grub
 grub-install /dev/sda
@@ -44,6 +38,10 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "exec mate-session" > ~/.xinitrc
 sudo pacman -S mate lightdm lightdm-gtk-greeter
 systemctl enable lightdm
+echo "Enter root password"
+passwd
+echo "Enter max password"
+passwd max
 exit
 umount -R /mnt
 #reboot
