@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # legacy mode
-cfdisk /dev/sda
+#cfdisk /dev/sda
 #dos
 #
 #/dev/sda1  choose at least 10 GB of space (root of filesystem)
